@@ -1,0 +1,111 @@
+/* Color Scheme */
+
+/* 
+https://color.adobe.com/PANTONE-18-3838-Ultra-Violet-color-theme-10410758/
+*/
+
+body {
+    font-size: 16px;
+}
+
+.container {
+    display: grid;
+
+        /*  Define the size and number of columns in our grid. 
+    The fr unit works similar to flex:
+    fr columns will share the free space in the row in proportion to their value.
+    We will have 2 columns - the first will be 3x the size of the second.  */
+    grid-template-columns: 3fr 1fr;
+
+        /*  Assign the grid areas we did earlier to specific places on the grid. 
+        First row is all header.
+        Second row is shared between main and sidebar.
+        Last row is all footer.  */
+    grid-template-areas:
+    "header header"
+	"main sidebar"
+	"footer footer";
+
+    /*  The gutters between each grid cell will be 60 pixels. */
+    grid-gap: 0px;
+}
+
+div {
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.homeImage {
+/*    position: absolute;*/
+    width: 100%;
+    height: 220px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #482255;
+}
+
+
+.main {
+    color: #000;
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #007170;
+    height: 80px;
+}
+
+.navbar {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+    font-weight:bold;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: #4d9900
+}
+ul {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+/*    border: 10px solid #e7e7e7;*/
+    background-color:/* #14cc2d;*/#4d9900;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    font-weight: bold;
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    padding: 3px 0 5px 0;
+    text-decoration: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
