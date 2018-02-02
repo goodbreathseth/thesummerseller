@@ -15,7 +15,7 @@ body {
     The fr unit works similar to flex:
     fr columns will share the free space in the row in proportion to their value.
     We will have 2 columns - the first will be 3x the size of the second.  */
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 2fr;
 
         /*  Assign the grid areas we did earlier to specific places on the grid. 
         First row is all header.
@@ -24,7 +24,7 @@ body {
     grid-template-areas:
     "header header"
 	"main sidebar"
-	"footer footer";
+	"footer sidebar";
 
     /*  The gutters between each grid cell will be 60 pixels. */
     grid-gap: 0px;
@@ -50,22 +50,30 @@ div {
 
 .sidebar {
     grid-area: sidebar;
-    background-color: #482255;
+    background-color: /*#550df2;*/ #4d9900;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: lighter;
 }
 
 
 .main {
     color: #000;
     grid-area: main;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: lighter;
 }
 
 .footer {
     grid-area: footer;
-    background-color: #007170;
-    height: 80px;
+    background-color: #4d0bda;
+    height: 60px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: lighter;
+    
 }
 
 .navbar {
+    position:fixed;
     font-family: 'Open Sans Condensed', sans-serif;
     text-align: center;
     font-size: 25px;
@@ -108,4 +116,47 @@ li a {
     padding: 3px 0 5px 0;
     text-decoration: none;
     font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 1px;
+    background-color: black;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.tocenter {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:18em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: lighter;
+   
+}
+
+.photos {
+    height: 120px;
+    width: 120px;
+}
+
+.mission {
+    color: black;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: lighter;
+    font-size:25px;
+}
+
+h2 {
+    color: black;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.contact {
+    color:black;
 }
